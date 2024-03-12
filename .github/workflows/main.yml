@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Generate lighthouse data
         id: lighthouse-check
-        uses: chris-ivan/test-lighthouse-action@v1.1
+        uses: chris-ivan/test-lighthouse-action@v1.2
         with:
           non-auth-paths: >
             /login
