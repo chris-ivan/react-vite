@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    name: A lighthouse test job
+    steps:
+      - name: Generate lighthouse data
+        id: lighthouse-check
+        uses: chris-ivan/test-lighthouse-action@v1.1
+        with:
+          non-auth-paths: >
+            /login
+            /privacy-policy
+          auth-paths: >
+            /campaign
+            /audit
