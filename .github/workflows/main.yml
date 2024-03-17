@@ -7,11 +7,6 @@ jobs:
     steps:
       - name: Generate lighthouse data
         id: lighthouse-check
-        uses: chris-ivan/test-lighthouse-action@v1.2
+        uses: chris-ivan/test-lighthouse-action@0.1
         with:
-          non-auth-paths: >
-            /login
-            /privacy-policy
-          auth-paths: >
-            /campaign
-            /audit
+          who-to-greet: "Mona the Octocat"
