@@ -14,4 +14,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lighthouse-report
-          path: /action/workspace/lighthouse
+          path: action/workspace/lighthouse
+          if-no-files-found: error
