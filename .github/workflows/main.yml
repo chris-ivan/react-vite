@@ -7,6 +7,11 @@ jobs:
     steps:
       - name: Generate lighthouse data
         id: lighthouse-check
-        uses: chris-ivan/test-lighthouse-action@0.3
+        uses: chris-ivan/test-lighthouse-action@0.4
         with:
           who-to-greet: "Mona the Octocat"
+      - name: Upload Lighthouse Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-report
+          path: lighthouse
